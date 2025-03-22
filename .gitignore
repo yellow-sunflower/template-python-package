@@ -7,9 +7,15 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv/
+venv/
+.env/
+env/
 
+# vs code config
 .vscode/
+
+# files on mac
 .DS_Store
 
 # all cache files
