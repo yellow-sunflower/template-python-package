@@ -1,8 +1,8 @@
 # Python package template
 
-This template contains:
+A python package template that contains everything you need to create a package.
 
-- a very basic function and its tests
+- a very basic function (`add_digit`) and tests
 - a `.gitignore` with all the basic stuff we don't want to track
 - 3 github actions:
   - format the code with `ruff`
@@ -14,7 +14,7 @@ This template contains:
 
 <br>
 
-## Set up for your package
+## How to use this template
 
 - Click on `Use this template` and `Create a new repository`
 - Clone your repo
@@ -24,6 +24,18 @@ git clone https://github.com/your_name/package_name.git
 ```
 
 - Replace info in `pyproject.toml`
-- Replace all `package_name` to your actual package
-- Replace all `your_name` to your Github username/organization
+- Replace **all** `package_name` to your actual package
+- Replace **all** `your_name` to your Github username/organization
 - Change the `LICENSE` file to your actual license (optional)
+- Ensure everything works well
+
+```bash
+uv sync --all-extras --dev
+uv run pytest
+```
+
+- Preview the documentation website
+
+```bash
+uv run mkdocs serve
+```
