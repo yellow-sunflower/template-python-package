@@ -1,26 +1,45 @@
 [project]
 name = "package_name"
+description = "Description"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["a", "list", "of", "keywords"]
 authors = [
-  { name="author_name", email="email" },
+  { name="Your Name", email="yourname@mail.com" },
 ]
-dependencies = []
+readme = "README.md"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha"
 ]
+dependencies = []
+
+[build-system]
+requires = [
+    "setuptools",
+    "setuptools-scm",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["package_name"]
+
+[tool.uv.sources]
+package_name = { workspace = true }
 
 [dependency-groups]
 dev = [
     "pre-commit>=4.2.0",
     "pytest>=8.3.5",
-    "ruff>=0.11.2",
+    "mkdocs-material>=9.6.9",
+    "mkdocstrings-python>=1.16.5",
 ]
 
 [project.urls]
-Homepage = "https://github.com/user_name/package_name"
-Issues = "https://github.com/user_name/package_name/issues"
+Homepage = "https://YOURNAME.github.io/package_name/"
+Issues = "https://github.com/YOURNAME/package_name/issues"
+Documentation = "https://YOURNAME.github.io/package_name/"
+Repository = "https://github.com/YOURNAME/package_name"
